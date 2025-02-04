@@ -1,14 +1,15 @@
-def puzzle_pieces(list1, list2):
-    if len(list1) != len(list2):
+def puzzle_pieces(a, b):
+    if len(a) != len(b):
         return False
-    
-    sum_value = list1[0] + list2[0]
-    
-    for i in range(1, len(list1)):
-        if list1[i] + list2[i] != sum_value:
-            return False
-    
-    return True
+
+    sums = []
+    for i in range(len(a)):
+        sums.append(a[i] + b[i])
+
+    if len(set(sums)) == 1:
+        return True
+    else:
+        return False
 
 print(puzzle_pieces([1, 2, 3, 4], [4, 3, 2, 1]))
 print(puzzle_pieces([1, 8, 5, 0, -1, 7], [0, -7, -4, 1, 2, -6]))
