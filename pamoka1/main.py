@@ -1,10 +1,13 @@
-def puzzle_pieces(a, b):
-    if len(a) != len(b):
+from typing import List
+
+
+def puzzle_pieces(First_list:List[int], Second_list:list[int]) ->  bool:
+    if len(First_list) != len(Second_list):
         return False
 
     sums = []
-    for i in range(len(a)):
-        sums.append(a[i] + b[i])
+    for i in range(len(First_list)):
+        sums.append(First_list[i] + Second_list[i])
 
     if len(set(sums)) == 1:
         return True
