@@ -47,8 +47,8 @@ print(sorted_list)
 
 # Use lambda functions to sort list of strings by their length and then alphabetically.
 
-words = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape']
+words = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape', 'aaa']
 
-sorted_words = sorted(words, key=lambda x: len(x))
+sorted_words = sorted(words, key=lambda x: (len(x), x))
 
 print(sorted_words)
