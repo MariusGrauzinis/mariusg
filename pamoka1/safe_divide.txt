@@ -1,0 +1,4 @@
+2025-02-19 18:13:53 - root - INFO - Successful division: 20 / 4 = 5.0
+2025-02-19 18:13:53 - root - ERROR - No go, zero division error <class 'ZeroDivisionError'>
+2025-02-19 18:13:53 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 18:13:53 - root - INFO - Successful division: 8 / 5 = 1.6
