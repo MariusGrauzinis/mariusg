@@ -19,10 +19,10 @@ def safe_divide(num1:Optional[int], num2:Optional[int]) ->float:
         print("Division was successful")
         return result
     except ZeroDivisionError:
-        logging.warning(f"No go, zero division error {ZeroDivisionError}")
+        logging.error(f"No go, zero division error {ZeroDivisionError}")
         return "Error: Cannot divide by zero."
     except TypeError:
-        logging.warning(f"No go, one or both of the arguments != number {TypeError}")
+        logging.error(f"No go, one or both of the arguments != number {TypeError}")
         return "Error: Both inputs must be numbers."
         
 
