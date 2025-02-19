@@ -1,5 +1,5 @@
+
 import logging
-from typing import Optional
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -9,22 +9,29 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
-def safe_divide(num1:Optional[int], num2:Optional[int])->float:
-
+def devide_numbers(num1:int, num2:int) ->float | None:
+    logging.info(f"Dividing number {num1} by number {num2}")
     try:
-        result = num1/num2
-        print("Attempted division")
-        return result
-    except ZeroDivisionError:
-        logging.critical(f"No go, zero division error {ZeroDivisionError} ")
-        print("Division by 0 is not possible")
-        return "ERROR"
+        return num1 + num2
     except TypeError:
-        logging.critical(f"No go, one or both of the arguments != number {TypeError} ")
-        print("Both arguments must be numbers")
-        return "ERROR"
+        logging.error(f"No go, one or both of the arguments != number {TypeError}")
+        return("Error: Both inputs must be numbers.")
+    except ValueError:
+        logging.error(f"No go, one or both of the arguments != number {ValueError}")
+        return("Both num1 and bnum2 must be of the same type, either both integers or both floats.")
 
-print(safe_divide(3,4))
-print(safe_divide(10, 0))
-print(safe_divide(20, "s"))  
-print(safe_divide(8, 5))
+print(devide_numbers(10, "s"))
+print(devide_numbers(10, 5))
+
+def get_value_from_dict(data, key):
+    try:
+        return data[key]
+    except KeyError:
+        logging.error(f"Error the {key} does not exist in the dictionaty {KeyError}")
+        return (f"Error: The key '{key}' does not exist in the dictionary.")
+
+
+my_dict = {'name': 'Alice', 'age': 30}
+print(get_value_from_dict(my_dict, 'gender'))
+
+def 
