@@ -3,16 +3,16 @@ from typing import Optional
 
 logging.basicConfig(
     level=logging.DEBUG,
-    filename="data.log",
+    filename="safe_divide.txt",
     filemode="a",
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
-def safe_divide(first_number:Optional[int], second_number:Optional[int])->float:
+def safe_divide(num1:Optional[int], num2:Optional[int])->float:
 
     try:
-        result = first_number/second_number
+        result = num1/num2
         print("Attempted division")
         return result
     except ZeroDivisionError:
