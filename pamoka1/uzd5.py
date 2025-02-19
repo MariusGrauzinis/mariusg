@@ -16,16 +16,13 @@ def safe_divide(num1:Optional[int], num2:Optional[int]) ->float:
     try:
         result = num1 / num2
         logging.info(f"Successful division: {num1} / {num2} = {result}")
-        print("Attempted division")
         print("Division was successful")
         return result
     except ZeroDivisionError:
-        logging.critical(f"No go, zero division error {ZeroDivisionError}")
-        print("Attempted division")
+        logging.warning(f"No go, zero division error {ZeroDivisionError}")
         return "Error: Cannot divide by zero."
     except TypeError:
-        logging.critical(f"No go, one or both of the arguments != number {TypeError}")
-        print("Attempted division")
+        logging.warning(f"No go, one or both of the arguments != number {TypeError}")
         return "Error: Both inputs must be numbers."
         
 
