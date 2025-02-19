@@ -2,3 +2,47 @@
 2025-02-19 18:13:53 - root - ERROR - No go, zero division error <class 'ZeroDivisionError'>
 2025-02-19 18:13:53 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
 2025-02-19 18:13:53 - root - INFO - Successful division: 8 / 5 = 1.6
+2025-02-19 19:20:54 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:21:44 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:22:27 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:24:12 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:26:22 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:26:22 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:26:22 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:28:23 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:28:23 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:28:23 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:29:22 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:29:22 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:29:22 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:31:52 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:35:05 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:35:05 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:35:05 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:35:32 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:35:32 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:35:32 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:37:44 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:37:44 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:37:44 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:37:44 - root - ERROR - Error the gender does not exist in the dictionaty <class 'KeyError'>
+2025-02-19 19:41:50 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:41:50 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:41:50 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:41:50 - root - ERROR - Error the gender does not exist in the dictionaty <class 'KeyError'>
+2025-02-19 19:46:59 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:46:59 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:46:59 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:46:59 - root - ERROR - Error the gender does not exist in the dictionaty <class 'KeyError'>
+2025-02-19 19:48:21 - root - INFO - Successful division: 20 / 4 = 5.0
+2025-02-19 19:48:21 - root - ERROR - No go, zero division error <class 'ZeroDivisionError'>
+2025-02-19 19:48:21 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:48:21 - root - INFO - Successful division: 8 / 5 = 1.6
+2025-02-19 19:49:23 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:49:23 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:49:23 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:49:23 - root - ERROR - Error the gender does not exist in the dictionaty <class 'KeyError'>
+2025-02-19 19:50:56 - root - INFO - Dividing number 10 by number s
+2025-02-19 19:50:56 - root - ERROR - No go, one or both of the arguments != number <class 'TypeError'>
+2025-02-19 19:50:56 - root - INFO - Dividing number 10 by number 5
+2025-02-19 19:50:56 - root - ERROR - Error the gender does not exist in the dictionaty <class 'KeyError'>

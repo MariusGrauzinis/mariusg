@@ -40,3 +40,14 @@ def devides_number (numbers2: List[int]) -> List[int]:
 numbers = list(range(1, 1000))
 result = devides_number(numbers)
 print(result)
+
+def divide(a: int, b: int) -> float | None:
+    try:
+        result = a / b
+        # print(result)
+        return result
+    except Exception as e:
+        print(e)
+
+
+print(divide(10, 5))
