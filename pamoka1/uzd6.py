@@ -33,5 +33,3 @@ def get_value_from_dict(data, key):
 
 my_dict = {'name': 'Alice', 'age': 30}
 print(get_value_from_dict(my_dict, 'gender'))
-
-def 
