@@ -8,20 +8,25 @@ class Book:
 
     def get_author(self) -> str:
         return f"Author: {self.author}"
+    
+    def book_info(self) -> str:
+        return f"Name: {self.title}, Author: {self.author}"
 
-pride_and_prejudice = Book("Puikybė ir prietarai", "Džeinė Ostin")
-hamlet = Book("Hamletas", "Viljamas Šekspyras")
-war_and_peace = Book("Karas ir taika", "Levas Tolstojus")
-harry_potter = Book("Haris Poteris", "D. K. Rouling")
 
-print(harry_potter.get_title())  
-print(harry_potter.get_author())  
+dune = Book("Dune", " Frank Herbert")
+no_longer_human = Book("No Longer Human", "Osamu Dazai")
+normal_people = Book ("Normal People", "Sally Rooney")
+the_songs_of_achilles = Book("The Song of Achilles", "Madeline Miller")
+burn_after_writting = Book("Burn After Writing", "Sharon Jones")
 
-print(pride_and_prejudice.get_title())  
-print(pride_and_prejudice.get_author())  
 
-print(hamlet.get_title())  
-print(hamlet.get_author())  
 
-print(war_and_peace.get_title())  
-print(war_and_peace.get_author())  
+
+print(dune.get_author())
+print(the_songs_of_achilles.get_title())
+print(normal_people.get_author())
+print(no_longer_human.get_title())
+print(the_songs_of_achilles.get_author())
+print(burn_after_writting.get_title())
+print(dune.book_info())
+print(the_songs_of_achilles.book_info())
