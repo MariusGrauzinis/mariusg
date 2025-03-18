@@ -23,6 +23,14 @@ class Dog(Animal):
         self.breed = breed
     def make_sound(self) -> str:
         return "AU AU!"
+    def get_color(color) -> str:
+        return "Brown"
+    def get_name(name) -> str:
+        return "Centas"
+    def get_age(age) -> int:
+        return "3"
+    def get_breed(breed) -> str:
+        return "Labrador"
 
     def get_info(self) -> str:
         return f"Dog - Name: {self.name}, Age: {self.age}, Color: {self.color}, Breed: {self.breed}"
@@ -35,6 +43,10 @@ class Cat(Animal):
 
     def make_sound(self) -> str:
         return "Meu!"
+    def get_age(age) -> int:
+        return "9"
+    def get_name(name) -> str:
+        return "Mafasa"
 
     def get_info(self) -> str:
         return f"Cat - Name: {self.name}, Age: {self.age}, Color: {self.color}, Lives Left: {self.lives_left}"
@@ -47,6 +59,12 @@ class Bird(Animal):
 
     def make_sound(self) -> str:
         return "Cip cip!"
+    def get_color(color) -> str:
+        return "Yellow"
+    def get_name(name) -> str:
+        return "Geniukas"
+    def fly(can_fly) -> bool:
+        return "True"
 
     def get_info(self) -> str:
         return f"Bird - Name: {self.name}, Age: {self.age}, Color: {self.color}, Can Fly: {self.can_fly}"
@@ -64,3 +82,6 @@ print(My_cat.make_sound())
 
 print(My_bird.get_info())
 print(My_bird.make_sound())
+
+print(My_dog.get_color())
+print(My_bird.fly())
