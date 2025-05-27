@@ -25,15 +25,18 @@ from collections import Counter
 from dataclasses import dataclass
 from typing import List
 import logging
+import json
 
-# Setup logger
+# Logger setup
 logger = logging.getLogger("TextProcessor")
 logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-logger.addHandler(handler)
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
 
+# Duomenų klasė ataskaitai
 @dataclass
 class TextReport:
     fixed_text: str
@@ -43,11 +46,12 @@ class TextReport:
     most_common_words: str
 
     def __str__(self) -> str:
-        return str(self.__dict__)
+        return json.dumps(self.__dict__, indent=2)
 
     def __repr__(self) -> str:
         return f"<TextReport with {self.number_of_words} words>"
 
+# Teksto analizavimo klasė
 class TextProcessor:
     def __init__(self, raw_text: str) -> None:
         self.raw_text = raw_text
@@ -65,10 +69,14 @@ class TextProcessor:
     @staticmethod
     def clean_text(text: str) -> str:
         logger.info("Cleaning text")
-        text = re.sub(r',(\S)', r', \1', text)
-        sentences = re.split(r'(?<=[.!?]) +', text.strip())
-        cleaned = ' '.join(s[0].upper() + s[1:] if s else '' for s in sentences)
-        return cleaned
+        text = re.sub(r',(\S)', r', \1', text)  # Prideda tarpą po kablelio jei reikia
+        sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+        cleaned_sentences = []
+        for s in sentences:
+            s = s.strip()
+            if s:
+                cleaned_sentences.append(s[0].upper() + s[1:] if len(s) > 1 else s.upper())
+        return ' '.join(cleaned_sentences)
 
     @property
     def fixed_text(self) -> str:
@@ -91,11 +99,14 @@ class TextProcessor:
         return len([word for word in self.words if word.isdigit()])
 
     @property
-    def most_common_words(self) -> str:
+    def most_common_words_list(self) -> List[str]:
         counts = Counter(word.lower() for word in self.words if not word.isdigit())
         max_freq = max(counts.values(), default=0)
-        most_common = [w for w, c in counts.items() if c == max_freq]
-        return ', '.join(most_common)
+        return [w for w, c in counts.items() if c == max_freq]
+
+    @property
+    def most_common_words(self) -> str:
+        return ', '.join(self.most_common_words_list)
 
     def generate_report(self) -> TextReport:
         return TextReport(
@@ -106,20 +117,26 @@ class TextProcessor:
             most_common_words=self.most_common_words
         )
 
+# Vartotojo teksto įvedimas
 def get_user_text() -> str:
     print("Enter your text (at least one sentence). Press Enter twice to finish:")
-    lines = []
-    while True:
-        line = input()
-        if line == "":
-            break
-        lines.append(line)
-    return ' '.join(lines)
+    try:
+        lines = []
+        while True:
+            line = input()
+            if not line.strip():
+                break
+            lines.append(line)
+        return ' '.join(lines).strip()
+    except KeyboardInterrupt:
+        print("\nInput interrupted by user.")
+        return ''
 
+# Pagrindinis meniu
 def main() -> None:
     try:
         raw_text = get_user_text()
-        if not raw_text.strip():
+        if not raw_text:
             print("You must enter some text.")
             return
 
