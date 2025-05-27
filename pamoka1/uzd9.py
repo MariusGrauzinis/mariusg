@@ -31,7 +31,7 @@ class Cat(Animal):
 
 
     def make_sound(self) -> str:
-        return "Meu!"
+        return "Meu"
     def animal_color(self) -> str:
         return "Black"
 
