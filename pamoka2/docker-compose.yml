@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: ./api  # 👈 turi būti katalogas, kuriame yra app.py ir Dockerfile
+    volumes:
+      - ./api:/app
+    ports:
+      - "5000:5000"
+    command: python app.py

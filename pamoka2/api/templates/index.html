@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Analyzer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Text Analyzer</h1>
+
+    <form method="post" action="/" class="mb-4">
+      <div class="mb-3">
+        <textarea class="form-control" name="text" rows="5" placeholder="Įveskite tekstą..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Analizuoti</button>
+    </form>
+
+    {% if report %}
+    <div class="card">
+      <div class="card-header">Rezultatai</div>
+      <div class="card-body">
+        <p><strong>Pataisytas tekstas:</strong> {{ report.fixed_text }}</p>
+        <p><strong>Sakinių skaičius:</strong> {{ report.number_of_sentences }}</p>
+        <p><strong>Žodžių skaičius:</strong> {{ report.number_of_words }}</p>
+        <p><strong>Skaičių skaičius:</strong> {{ report.count_of_numbers }}</p>
+        <p><strong>Dažniausi žodžiai:</strong> {{ report.most_common_words }}</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
