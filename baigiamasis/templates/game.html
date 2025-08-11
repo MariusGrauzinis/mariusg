@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Hangman žaidimas</h2>
+
+  <pre style="font-size: 18px; line-height: 1.1;">{{ hangman_pic }}</pre>
+
+  <p>Žodis: <strong>{{ word }}</strong></p>
+  <p>Bandymai liko: {{ tries }}</p>
+
+  <form method="POST" autocomplete="off">
+      <label for="guess">Įveskite raidę arba žodį:</label><br>
+      <input type="text" id="guess" name="guess" maxlength="30" required autofocus>
+      <button type="submit">Spėti</button>
+  </form>
+
+  {% if message %}
+    <p style="color: red; margin-top: 15px;">{{ message }}</p>
+  {% endif %}
+
+  <p style="margin-top: 20px;">
+    <a href="{{ url_for('logout') }}">Atsijungti</a>
+  </p>
+{% endblock %}

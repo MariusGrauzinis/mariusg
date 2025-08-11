@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hangman žaidimas</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    main {
+      background: #fff;
+      margin-top: 40px;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      background-color: #007BFF;
+      border: none;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 15px 0 0 0;
+      text-align: center;
+    }
+
+    .message {
+      margin-top: 15px;
+      padding: 12px;
+      background-color: #fdecea;
+      color: #d93025;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(217, 48, 37, 0.3);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.25s ease;
+    }
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

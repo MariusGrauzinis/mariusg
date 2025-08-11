@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Žaidimo rezultatas</h2>
+
+  {% if success %}
+    <p style="color: green; font-weight: bold;">Sveikiname! Jūs laimėjote! 🎉</p>
+  {% else %}
+    <p style="color: red; font-weight: bold;">Deja, pralaimėjote. 😞</p>
+  {% endif %}
+
+  <p>Teisingas žodis buvo: <strong>{{ word }}</strong></p>
+
+  <p>
+    <a href="{{ url_for('game') }}">Žaisti dar kartą</a> |
+    <a href="{{ url_for('logout') }}">Atsijungti</a>
+  </p>
+{% endblock %}

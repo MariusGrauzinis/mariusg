@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form method="POST" autocomplete="off" style="max-width: 350px; margin: 20px auto; padding: 20px; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <label for="username" style="display:block; margin-bottom:6px; font-weight:600;">Vartotojo vardas:</label>
+    <input type="text" id="username" name="username" placeholder="Įveskite vartotojo vardą" required autofocus
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+
+    <label for="password" style="display:block; margin-bottom:6px; font-weight:600;">Slaptažodis:</label>
+    <input type="password" id="password" name="password" placeholder="Įveskite slaptažodį" required
+      style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+    <button type="submit" style="width: 100%; padding: 10px; background-color: #007BFF; border: none; border-radius: 5px; color: white; font-size: 1.1rem; cursor: pointer;">
+      Prisijungti
+    </button>
+  </form>
+  <p style="text-align: center; margin-top: 15px;">
+    Neturite paskyros? <a href="{{ url_for('register') }}" style="color:#007BFF; text-decoration:none;">Registruokitės</a>
+  </p>
+{% endblock %}
